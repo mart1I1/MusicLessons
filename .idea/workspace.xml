@@ -2,38 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9575b3d6-181f-449c-934a-1ab058561a24" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/controller/LessonsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/entity/Lesson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/exception/LessonMelodyAlreadyExist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/exception/LessonNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/assessment/HomeworkAssessment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/assessment/HomeworkMistake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/assessment/HomeworkMistakeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/controller/HomeworkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/entity/Homework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/exception/HomeworkMelodyAlreadyExist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/exception/HomeworkNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/repository/HomeworkRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/service/HomeworkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/service/HomeworkServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/homework/validator/HomeworkValidator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/repository/LessonsRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/service/LessonService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/service/LessonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/validator/LessonValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/exception/StorageException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/exception/StorageFileNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/properties/StorageProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/service/StorageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/service/StorageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mart1I1/music/lesson/controller/LessonsControllerTestIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/swagger/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/mart1I1/music/homework/controller/HomeworkControllerTestIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/assessment/HomeworkAssessment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/assessment/HomeworkMistake.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/assessment/HomeworkMistakeType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/controller/HomeworkController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/entity/Homework.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/exception/HomeworkMelodyAlreadyExist.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/exception/HomeworkNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/repository/HomeworkRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/service/HomeworkService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/service/HomeworkServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/homework/validator/HomeworkValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/controller/LessonsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/entity/Lesson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/exception/LessonMelodyAlreadyExist.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/exception/LessonNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/repository/LessonsRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/service/LessonService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/service/LessonServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/lesson/validator/LessonValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/storage/exception/StorageException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/storage/exception/StorageFileNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/storage/properties/StorageProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/storage/service/StorageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/storage/service/StorageServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/swagger/SwaggerConfig$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mart1I1/music/swagger/SwaggerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/mart1I1/music/homework/controller/HomeworkControllerTestIT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/mart1I1/music/lesson/controller/LessonsControllerTestIT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/MusicLessonsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/entity/MusicLesson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/LessonMelodyAlreadyExist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/LessonNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/MusicLessonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/controller/LessonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/entity/MusicLesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/entity/Lesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/LessonMelodyAlreadyExist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/exception/LessonMelodyAlreadyExist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/LessonNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/exception/LessonNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/MusicLessonService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/MusicLessonServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/MusicLessonValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/musicLesson/MusicLessonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/lesson/validator/LessonValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/repository/MusicLessonsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageFileNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mart1I1/musicLesson/MusicLessonsControllerTestIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/exception/StorageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageFileNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/exception/StorageFileNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/properties/StorageProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/service/StorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mart1I1/storage/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mart1I1/music/storage/service/StorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mart1I1/musicLesson/MusicLessonsControllerTestIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mart1I1/music/lesson/controller/LessonsControllerTestIT.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
