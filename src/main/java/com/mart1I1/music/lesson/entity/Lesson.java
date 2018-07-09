@@ -1,18 +1,22 @@
-package com.mart1I1.entity;
+package com.mart1I1.music.lesson.entity;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "MUSIC_LESSONS")
-public class MusicLesson {
+public class Lesson {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name= "increment", strategy= "increment")
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long lessonId;
 
@@ -30,16 +34,16 @@ public class MusicLesson {
     @JsonIgnore
     private String storedMelodyName;
 
-    public MusicLesson() {
+    public Lesson() {
 
     }
 
-    public MusicLesson(Long lessonId, String timestamp, String username, String title, String description){
+    public Lesson(Long lessonId, String timestamp, String username, String title, String description){
         this(timestamp, username, title, description);
         this.lessonId = lessonId;
     }
 
-    public MusicLesson(String timestamp, String username, String title, String description) {
+    public Lesson(String timestamp, String username, String title, String description) {
         this.timestamp = timestamp;
         this.username = username;
         this.title = title;

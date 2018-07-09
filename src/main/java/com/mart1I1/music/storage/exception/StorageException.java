@@ -1,4 +1,4 @@
-package com.mart1I1.storage;
+package com.mart1I1.music.storage.exception;
 
 public class StorageException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.mart1I1.storage;
+package com.mart1I1.music.storage.service;
 
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;

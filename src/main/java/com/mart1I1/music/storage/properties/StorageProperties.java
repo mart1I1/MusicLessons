@@ -1,4 +1,4 @@
-package com.mart1I1.storage;
+package com.mart1I1.music.storage.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

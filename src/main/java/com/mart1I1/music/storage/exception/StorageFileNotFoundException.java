@@ -1,4 +1,4 @@
-package com.mart1I1.storage;
+package com.mart1I1.music.storage.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

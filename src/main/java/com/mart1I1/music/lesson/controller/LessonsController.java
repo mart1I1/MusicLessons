@@ -1,8 +1,8 @@
-package com.mart1I1;
+package com.mart1I1.music.lesson.controller;
 
-import com.mart1I1.entity.MusicLesson;
-import com.mart1I1.musicLesson.MusicLessonService;
-import com.mart1I1.musicLesson.MusicLessonValidator;
+import com.mart1I1.music.lesson.entity.Lesson;
+import com.mart1I1.music.lesson.service.LessonService;
+import com.mart1I1.music.lesson.validator.LessonValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -17,12 +17,12 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping("/music/lessons")
-public class MusicLessonsController {
+public class LessonsController {
 
-    private MusicLessonService musicLessonService;
+    private LessonService lessonService;
 
     @Autowired
-    private MusicLessonValidator validator;
+    private LessonValidator validator;
 
     @InitBinder
     protected void initBinder(final WebDataBinder binder)
@@ -31,43 +31,43 @@ public class MusicLessonsController {
     }
 
     @Autowired
-    MusicLessonsController(MusicLessonService musicLessonService) {
-        this.musicLessonService = musicLessonService;
+    LessonsController(LessonService lessonService) {
+        this.lessonService = lessonService;
     }
 
     @PostMapping
-    ResponseEntity<MusicLesson> addMusicLesson(@Valid @RequestBody MusicLesson musicLesson) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(musicLessonService.addLesson(musicLesson));
+    ResponseEntity<Lesson> addMusicLesson(@Valid @RequestBody Lesson lesson) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(lessonService.addLesson(lesson));
     }
 
     @GetMapping
-    Collection<MusicLesson> getMusicLessons() {
-        return musicLessonService.getLessons();
+    Collection<Lesson> getMusicLessons() {
+        return lessonService.getLessons();
     }
 
 
     @GetMapping("/{lessonId}")
-    MusicLesson getMusicLesson(@PathVariable Long lessonId) {
-        return musicLessonService.getLessonBy(lessonId);
+    Lesson getMusicLesson(@PathVariable Long lessonId) {
+        return lessonService.getLessonBy(lessonId);
     }
 
 
     @GetMapping("/{lessonId}/melody")
     ResponseEntity<Resource> getMusicLessonMelody(@PathVariable Long lessonId) {
-        MusicLesson musicLesson = musicLessonService.getLessonBy(lessonId);
-        Resource melody = musicLessonService.getLessonMelody(musicLesson);
+        Lesson lesson = lessonService.getLessonBy(lessonId);
+        Resource melody = lessonService.getLessonMelody(lesson);
         return ResponseEntity
                 .ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION,
-                        "attachment; filename=\"" + musicLesson.getRealMelodyName() + "\"")
+                        "attachment; filename=\"" + lesson.getRealMelodyName() + "\"")
                 .body(melody);
     }
 
     @PostMapping("/{lessonId}/melody")
     ResponseEntity<?> addMusicLessonMelody(@PathVariable Long lessonId,
                                 @RequestParam(name = "melody") MultipartFile melody){
-        MusicLesson musicLesson = musicLessonService.getLessonBy(lessonId);
-        musicLessonService.storeLessonMelody(musicLesson, melody);
+        Lesson lesson = lessonService.getLessonBy(lessonId);
+        lessonService.storeLessonMelody(lesson, melody);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
