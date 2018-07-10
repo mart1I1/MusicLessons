@@ -100,9 +100,7 @@ public class HomeworkControllerTestIT {
 
     @Test
     public void addHomeworkWithNullField() throws Exception {
-        Homework homework = new Homework(3L, "2018-07-08 12:07:57.252", "username", 1L);
-        homework.setUsername(null);
-
+        Homework homework = new Homework(3L, "2018-07-08 12:07:57.252", null, 1L);
         mockMvc.perform(post("/music/homeworks")
                 .content(objectMapper.writeValueAsBytes(homework))
                 .contentType(MediaType.APPLICATION_JSON))
@@ -111,7 +109,7 @@ public class HomeworkControllerTestIT {
 
     @Test
     public void addHomeworkWithEmptyField() throws Exception {
-        Homework homework = new Homework(3L, "", "username", 1L);
+        Homework homework = new Homework(3L, "2018-07-08 12:07:57.252", "", 1L);
         mockMvc.perform(post("/music/homeworks")
                 .content(objectMapper.writeValueAsBytes(homework))
                 .contentType(MediaType.APPLICATION_JSON))
@@ -187,6 +185,29 @@ public class HomeworkControllerTestIT {
     public void addHomeworkMelodyHomeworkNotFound() throws Exception {
         mockMvc.perform(multipart("/music/homeworks/{hwId}/melody", homeworkList.size() + 1)
                 .file(multipartFile))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void getAssessment() throws Exception {
+        lessonService.storeLessonMelody(lesson, multipartFile);
+        Homework homework = homeworkList.get(0);
+        mockMvc.perform(get("/music/homeworks/{hwId}/assessment", homework.getHwId()))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void getAssessmentLessonMelodyNotFound() throws Exception {
+        Homework homework = homeworkList.get(0);
+        mockMvc.perform(get("/music/homeworks/{hwId}/assessment", homework.getHwId()))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void getAssessmentHomeworkMelodyNotFound() throws Exception {
+        lessonService.storeLessonMelody(lesson, multipartFile);
+        Homework homework = homeworkList.get(1);
+        mockMvc.perform(get("/music/homeworks/{hwId}/assessment", homework.getHwId()))
                 .andExpect(status().isNotFound());
     }
 

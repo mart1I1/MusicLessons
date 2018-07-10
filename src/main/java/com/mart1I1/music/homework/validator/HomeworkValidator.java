@@ -21,9 +21,6 @@ public class HomeworkValidator implements Validator {
     @Override
     public void validate(Object o, Errors errors) {
         Homework homework = (Homework) o;
-        if (homework.getTimestamp() != null && homework.getTimestamp().isEmpty()) {
-            errors.rejectValue("timestamp", EMPTY_FIELD);
-        }
         if (homework.getTimestamp() != null) {
             SimpleDateFormat format = new SimpleDateFormat(TIMESTAMP_PATTERN);
             try {
@@ -31,12 +28,6 @@ public class HomeworkValidator implements Validator {
             } catch (ParseException e){
                 errors.rejectValue("timestamp", "bad format. need: " + TIMESTAMP_PATTERN);
             }
-        }
-        if (homework.getUsername() != null && homework.getUsername().isEmpty()) {
-            errors.rejectValue("username", EMPTY_FIELD);
-        }
-        if (homework.getLessonId() != null && homework.getLessonId() == null) {
-            errors.rejectValue("lessonId", EMPTY_FIELD);
         }
     }
 }

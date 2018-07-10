@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -20,10 +21,13 @@ public class Lesson {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long lessonId;
 
+    @NotEmpty
     @NotNull
     private String timestamp;
+    @NotEmpty
     @NotNull
     private String username;
+    @NotEmpty
     @NotNull
     private String title;
     @NotNull

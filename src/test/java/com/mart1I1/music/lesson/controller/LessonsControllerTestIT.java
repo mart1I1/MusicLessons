@@ -24,6 +24,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
@@ -84,9 +85,7 @@ public class LessonsControllerTestIT {
 
     @Test
     public void addMusicLessonWithNullField() throws Exception {
-        Lesson lesson = new Lesson(3L, "2018-07-08 12:07:57.252", "username", "title", "description");
-        lesson.setTitle(null);
-
+        Lesson lesson = new Lesson(3L, "2018-07-08 12:07:57.252", null, "title", "description");
         mockMvc.perform(post("/music/lessons")
                 .content(objectMapper.writeValueAsBytes(lesson))
                 .contentType(MediaType.APPLICATION_JSON))

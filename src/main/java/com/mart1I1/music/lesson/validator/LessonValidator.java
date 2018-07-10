@@ -21,9 +21,6 @@ public class LessonValidator implements Validator {
     @Override
     public void validate(Object o, Errors errors) {
         Lesson lesson = (Lesson)o;
-        if (lesson.getTimestamp() != null && lesson.getTimestamp().isEmpty()) {
-            errors.rejectValue("timestamp", EMPTY_FIELD);
-        }
         if (lesson.getTimestamp() != null) {
             SimpleDateFormat format = new java.text.SimpleDateFormat(TIMESTAMP_PATTERN);
             try {
@@ -31,12 +28,6 @@ public class LessonValidator implements Validator {
             } catch (ParseException e){
                 errors.rejectValue("timestamp", "bad format. need: " + TIMESTAMP_PATTERN);
             }
-        }
-        if (lesson.getUsername() != null && lesson.getUsername().isEmpty()) {
-            errors.rejectValue("username", EMPTY_FIELD);
-        }
-        if (lesson.getTitle() != null && lesson.getTitle().isEmpty()) {
-            errors.rejectValue("title", EMPTY_FIELD);
         }
     }
 }
